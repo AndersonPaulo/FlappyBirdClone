@@ -1,0 +1,84 @@
+#home-page{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+#home-page .menu{
+    display: flex;
+    flex: 1;
+    background-color: rgb(45, 44, 44);
+    height: 20vh;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: inset 20px 70px 60px 10px black;
+    z-index: 10 !important;
+    
+}
+#home-page .menu h1{
+    margin-right: 500px;
+    color: white;
+}
+#home-page .content{
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 35px;
+}
+#home-page .content  img{
+    width: 412px;
+    height: 456px;
+}
+#home-page .content .latao1{
+    background-image: url('../assets/latao2.png');
+    background-repeat:no-repeat;
+    width: 100px;
+    height: 600px;
+    opacity: 0;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    animation: goBack 10s infinite;
+    animation-delay: 0.5s;
+ 
+}
+#home-page .content .ul{
+    display: flex;
+    flex: 1;
+    flex-wrap: nowrap;
+    position: relative;
+}
+#home-page .content .player ul li{
+    position: absolute;
+}
+#home-page .content .player ul li img{
+    width: 256px;
+    height: 128px;
+    position: relative;
+    top:0px;
+    right: 560px;
+}
+@keyframes goBack{
+    0%{
+        left:0;
+        opacity: 0;
+    }
+    5%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        left: -600px;
+        opacity: 0;
+    }
+}
