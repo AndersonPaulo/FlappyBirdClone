@@ -1,8 +1,12 @@
 const MaxFrame = document.querySelectorAll(".player ul li").length-1
-const home = document.querySelector("#home-page .content ul")
+const Player = document.querySelector("#home-page .content ul")
 const Frame = document.querySelectorAll("ul img")
+const Fundo = document.querySelector("#home-page .content .fundo")
 let interval = 0
 let cont = 0
+let cont2 =0
+let clickFundo = false
+
 function AninPlayer(){
 
     let AninInterval = setInterval(function(){
@@ -14,32 +18,36 @@ function AninPlayer(){
         }
         Frame[interval].style.display = 'block'
 
-    },100)
+    },100)   
+}
 
-     home.addEventListener("click",(Event) =>{
-        cont=setInterval(function(){
-            cont-=5        
-            if(cont < -140){
-                cont=-140
+function MotionPlayer(){
+    
+//Efeito de gravidade sempre puxando pra baixo    
+        ClickDown=setInterval(function(){
+
+            cont+=5
+            if(cont > 250){
+                cont = 250
             }
-            Frame[interval].style.marginTop = `${cont}px`
-        },1)
+            Player.style.marginTop = `${cont}px`
+            },0.1) 
 
-        
-     })
+//Evento com o click do mouse  player fly 
+        Fundo.addEventListener("mousedown",(Event) =>{
+            ClickUp=setTimeout(function(){
+                cont-=100
+                if(cont < -200){
+                    cont=-200
+                }     
+                Player.style.marginTop = `${cont}px`
+            },0.1)
+                
+        })
+    
 
 }
 
-function Motion(){
-    cont=setInterval(function(){
-        cont+=2
-        home.style.marginTop = `${cont}px`
-        if(cont > 300){
-            cont=300
-        }
-    },1)
-}
-console.log(cont)
-Motion()
+MotionPlayer()
 AninPlayer()
 
