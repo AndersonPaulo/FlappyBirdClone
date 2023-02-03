@@ -26,7 +26,7 @@ function MotionPlayer(){
 //Efeito de gravidade sempre puxando pra baixo    
         ClickDown=setInterval(function(){
 
-            cont+=5
+            cont+=1
             if(cont > 250){
                 cont = 250
             }
@@ -36,15 +36,28 @@ function MotionPlayer(){
 //Evento com o click do mouse  player fly 
         Fundo.addEventListener("mousedown",(Event) =>{
             ClickUp=setTimeout(function(){
-                cont-=100
+                cont-=60
                 if(cont < -200){
                     cont=-200
-                }     
-                Player.style.marginTop = `${cont}px`
-            },0.1)
+                }    
                 
+            },0.5)
+            Player.style.marginTop = `${cont}px`
         })
-    
+//Evento com o botão space
+        document.addEventListener("keydown",(Event)=>{
+                if(Event.key===" "){
+                    ClickUp=setTimeout(function(){
+                        cont-=60
+                        if(cont < -200){
+                            cont=-200
+                        }    
+                        
+                    },0.5)
+                    Player.style.marginTop = `${cont}px`
+
+                }
+        })
 
 }
 
