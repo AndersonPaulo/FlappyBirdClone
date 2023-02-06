@@ -11,13 +11,13 @@ let leftFundo1 = setInterval(function(){
             Fundo1.style.right = `${contador}px`
         }
          
-},10)
+},9)
 
 let leftFundo2 = setInterval(function(){
     contador2 += 0.1
     Fundo2.style.right = `${contador2}px`
-    if(contador2 > 824){
+    if(contador2 > 820){
         contador2 =0
         Fundo2.style.right = `${contador2}px`
     }
-},10)
+},9)
