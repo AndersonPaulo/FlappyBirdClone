@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./styles/play.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="icon" href="./assets/medal.png">
-    <title>BUITRE Flay</title>
+    <title>BUITRE FLY</title>
 </head>
 <body>
     <div id="home-page">
@@ -18,38 +18,50 @@
             </div>
 
         </header>
-        <main>
-            <div class="display">
-            </div>
-            <div class="display2">
-            </div>
-            <div class="display3">
-            </div>
-            <div class="display4">
-            </div>
-            <div class="content">
-                <span class="score"><h4>SCORE :</h4><span><h3> 0</h3></span></span>
-                <img class="fundoMov1" src="./assets/fundo.png" alt="fundo" class="fundo">
-                <img class="fundoMov2" src="./assets/fundo.png" alt="fundo" class="fundo">
-                <span class="latao"></span>
-                
-            </div>
+        <main>       
+            <div class="grid">
+                <div class="box1">
 
-            <div class="player">
-                    <ul>
-                        <li><img src="./assets/Frame1.png" alt="Frame1"></li>
-                        <li><img src="./assets/Frame2.png" alt="Frame2"style="display:none"></li>
-                        <li><img src="./assets/Frame3.png" alt="Frame3"style="display:none"></li>
-                        <li><img src="./assets/Frame4.png" alt="Frame4"style="display:none"></li>
-                        <li><img src="./assets/Frame5.png" alt="Frame5"style="display:none"></li>
-                        <li><img src="./assets/Frame6.png" alt="Frame6"style="display:none"></li>
-                    </ul>
-            </div>
+                </div>
+                <div class="box2">
+                    
+                </div>
+                <div class="box3">
+                    <div class="content">
+                        <span class="score"><h4>SCORE:</h4><span><h3> 0 </h3></span></span>
+                        <img class="fundoMov1" src="./assets/fundo.png" alt="fundo" class="fundo">
+                        <img class="fundoMov2" src="./assets/fundo.png" alt="fundo" class="fundo">
+                        <span class="latao">
+                            <span class="pointColission">            
+                            </span>
+                        </span>
+                        
+                    </div>
 
-        </main>
+                    <div class="player">
+                            <ul>
+                                <li><img src="./assets/Frame1.png" alt="Frame1"></li>
+                                <li><img src="./assets/Frame2.png" alt="Frame2"style="display:none"></li>
+                                <li><img src="./assets/Frame3.png" alt="Frame3"style="display:none"></li>
+                                <li><img src="./assets/Frame4.png" alt="Frame4"style="display:none"></li>
+                                <li><img src="./assets/Frame5.png" alt="Frame5"style="display:none"></li>
+                                <li><img src="./assets/Frame6.png" alt="Frame6"style="display:none"></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="box4">
+
+                </div>  
+                <div class="box5">
+                    
+                </div>
+            </div>
+        </div>    
+    </main>
     </div>
     <script src="./scripts/playerAnin.js"></script>
     <script src="./scripts/fundo.js"></script>
     <script src="./scripts/latao.js"></script>
+    <script src="./scripts/collision.js"></script>
 </body>
 </html>
