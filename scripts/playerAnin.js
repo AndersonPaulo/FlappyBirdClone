@@ -69,15 +69,9 @@ function MotionPlayer(){
 
  }
 
-function startup(){
-    ButtonPlay.addEventListener("touchstart",handleStart,false)
-    ButtonPlay.addEventListener("touchend", handleEnd, false)
-    log("initialized.")
-}
+ButtonPlay.addEventListener("touchstart",StartButton)
+ function StartButton(){
 
- function handleStart(evt){
-     evt.preventDefault()
-     log("touchstart.")
      ClickUp = setTimeout(function(){
          
          if(FundoWidth.clientWidth == 206){
@@ -91,9 +85,10 @@ function startup(){
 
      },0.5)  
 }
-function handleEnd(evt) {
-    evt.preventDefault();
-    log("touchend/touchleave.");
+
+ButtonPlay.addEventListener("touchend",EndButton)
+function EndButton() {
+    ButtonPlay.style.backgrounColor = "red"
 }
 
 MotionPlayer()
