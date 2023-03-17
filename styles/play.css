@@ -10,7 +10,7 @@
     position: relative;
     background-color: rgb(45, 44, 44);
     height: 10vh;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     box-shadow: inset 10px 35px 30px 5px black;
     z-index: 10;
@@ -20,8 +20,8 @@
     width:150px;
 }
 #home-page .menu h1{
-    margin-right: 12rem;
-    font-size: 1rem;
+    margin-right: 18rem;
+    font-size: 0.8rem;
     color: white;
 }
 
@@ -29,6 +29,7 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr ;      
     grid-auto-rows: 180px;
+    margin-left: -3rem;
 }
 .box1 {
     grid-column-start: 1;
@@ -182,6 +183,7 @@
         display:grid;
         grid-template-columns: 1fr 1fr 1fr ;      
         grid-auto-rows: 160px;
+        margin-left: 0;
     }
     .box1 {
         grid-column-start: 1;

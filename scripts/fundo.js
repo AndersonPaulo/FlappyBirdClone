@@ -12,6 +12,7 @@ let leftFundo1 = setInterval(function(){
       
         contador1 += 0.1
         contador2 += 0.1
+
         Fundo2.style.right = `${contador2}px`
         Fundo1.style.right = `${contador1}px`    
         if(contador1 >= 412){
@@ -27,9 +28,11 @@ let leftFundo1 = setInterval(function(){
         }
     
     }
-    else{
+    if(Fundo1.clientWidth == 206){
+        
         contador4 += 0.1
         contador3 += 0.1
+
         Fundo2.style.right = `${contador4}px` 
         Fundo1.style.right = `${contador3}px`   
         if(contador4 >= 412){
