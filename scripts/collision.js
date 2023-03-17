@@ -1,26 +1,43 @@
 const point = document.querySelector("#home-page .pointColission").getBoundingClientRect()
-const player = document.querySelector("#home-page .player ul").getBoundingClientRect()
+const player = document.querySelector("#home-page .player ul").getBoundingClientRect()//div1
 const Score = document.querySelector("#home-page .score span h3")
 let contadorPoint = 0
+let verticalMatch = false
+let horizontalMatch = false
 
-
-
-const rectIntersect = function() {
-
-    return Math.max(point.left, point.right) >= Math.min(player.left, player.right) && 
-    Math.min(point.left, point.right) <= Math.max( player.left, player.right)&&
-    Math.max(point.top, point.bottom) >= Math.min(player.top,player.bottom) && 
-    Math.min(point.top,point.bottom) <= Math.max(player.top,player.bottom)
-
-}
-if(rectIntersect()){
-    contadorPoint+=1 
-    Score.innerHTML = `${contadorPoint}`
-    console.log(rectIntersect())
+setInterval(function(){
+    if ((point.top > player.top && point.top < player.bottom)||(point.bottom > player.top && point.bottom < player.bottom)) {
+        verticalMatch = true
+    } else{
+        verticalMatch = false
+    }
+    
+    if ((point.right > player.left && point.right < player.right)||(point.left < player.right && point.left > player.left)) {
+        horizontalMatch = true
+    } else {
+        horizontalMatch = false
+    }
+    
+    if (horizontalMatch && vertialMatch){
+        contadorPoint+=1 
+        Score.innerHTML = `${contadorPoint}` 
+    } 
+},1)
+// setInterval(function(){
    
-}
+    
+        // if (point.x < player.x + player.width &&
+        //     point.x + point.width > player.x &&
+        //     point.y < player.y + player.height &&
+        //     point.y + point.height > player.y){        
+        //         console.log(true)
+        //         contadorPoint+=1 
+        //         Score.innerHTML = `${contadorPoint}`   
+        // }       
+    
+//   },1)
 
 
-                  
+   
     
 

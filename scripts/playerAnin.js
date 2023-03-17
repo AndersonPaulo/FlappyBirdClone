@@ -73,7 +73,7 @@ function MotionPlayer(){
 
 
  function StartButton(){
-     ButtonPlay.style.backgrounColor = "blue"
+     ButtonPlay.style.backgroundColor = "blue"
      ClickUp = setTimeout(function(){
          
          if(FundoWidth.clientWidth == 206){
@@ -90,7 +90,7 @@ function MotionPlayer(){
 
 
 function EndButton() {
-    ButtonPlay.style.backgrounColor = "red"
+    ButtonPlay.style.backgroundColor = "red"
 }
 
 MotionPlayer()
