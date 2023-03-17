@@ -70,10 +70,14 @@ function MotionPlayer(){
  }
 
 function startup(){
-    ButtonPlay.document.addEventListener("touchstart",handleStart,false)
+    ButtonPlay.addEventListener("touchstart",handleStart,false)
+    ButtonPlay.addEventListener("touchend", handleEnd, false)
+    log("initialized.")
 }
 
- function handleStart(){
+ function handleStart(evt){
+     evt.preventDefault()
+     log("touchstart.")
      ClickUp = setTimeout(function(){
          
          if(FundoWidth.clientWidth == 206){
@@ -81,11 +85,17 @@ function startup(){
              if(cont < 16.25){
                  cont=16.25
              }    
-             Player.style.marginTop = `${cont}rem`  
+             Player.style.marginTop = `${cont}rem` 
+             ButtonPlay.style.backgrounColor = "blue" 
          } 
 
      },0.5)  
 }
+function handleEnd(evt) {
+    evt.preventDefault();
+    log("touchend/touchleave.");
+}
+
 MotionPlayer()
 AninPlayer()
 
