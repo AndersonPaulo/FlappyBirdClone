@@ -32,6 +32,8 @@ function MotionPlayer(){
                 Player.style.marginTop = `${cont}rem`
             }
             if(FundoWidth.clientWidth == 206){
+                ButtonPlay.addEventListener("touchend",EndButton)
+                ButtonPlay.addEventListener("touchstart",StartButton)
                 cont+=1.2
                 if(cont > 26.25){
                     cont = 26.25
@@ -69,9 +71,9 @@ function MotionPlayer(){
 
  }
 
-ButtonPlay.addEventListener("touchstart",StartButton)
- function StartButton(){
 
+ function StartButton(){
+     ButtonPlay.style.backgrounColor = "blue"
      ClickUp = setTimeout(function(){
          
          if(FundoWidth.clientWidth == 206){
@@ -80,13 +82,13 @@ ButtonPlay.addEventListener("touchstart",StartButton)
                  cont=16.25
              }    
              Player.style.marginTop = `${cont}rem` 
-             ButtonPlay.style.backgrounColor = "blue" 
+              
          } 
 
      },0.5)  
 }
 
-ButtonPlay.addEventListener("touchend",EndButton)
+
 function EndButton() {
     ButtonPlay.style.backgrounColor = "red"
 }
