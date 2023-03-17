@@ -3,9 +3,10 @@ const Player = document.querySelector("#home-page .player ul")
 const Frame = document.querySelectorAll("ul img")
 const Fundo = document.querySelector("#home-page .content .fundo")
 const FundoWidth = document.querySelector(".content .fundoMov1")
+const ButtonPlay = document.querySelector(".box2 .button")
 let interval = 0
 let cont = 0
-// clientWidth == 412
+
 function AninPlayer(){
 
     let AninInterval = setInterval(function(){
@@ -25,47 +26,66 @@ function MotionPlayer(){
         Down=setInterval(function(){
             if(FundoWidth.clientWidth == 412){
                 cont+=1.2
-                if(cont > 300){
-                    cont = 300
+                if(cont > 18.75){
+                    cont = 18.75
                 }
-                Player.style.marginTop = `${cont}px`
+                Player.style.marginTop = `${cont}rem`
             }
             if(FundoWidth.clientWidth == 206){
                 cont+=1.2
-                if(cont > 420){
-                    cont = 420
+                if(cont > 26.25){
+                    cont = 26.25
                 }
-                Player.style.marginTop = `${cont}px`
+                Player.style.marginTop = `${cont}rem`
             }
-            },0.1) 
+            },100) 
 
         
         document.addEventListener("keydown",(Event)=>{
                 if(Event.key===" "){
                     ClickUp = setTimeout(function(){
                         if(FundoWidth.clientWidth == 412){
-                            cont-=60
-                            if(cont < -20){
-                                cont=-20
+                            cont-=3.75
+                            if(cont < -1.25){
+                                cont=-1.25
                             }    
-                            Player.style.marginTop = `${cont}px`  
+                            Player.style.marginTop = `${cont}rem`  
                         } 
 
                         if(FundoWidth.clientWidth == 206){
-                            cont-=60
-                            if(cont < 260){
-                                cont=260
+                            cont-=3.75
+                            if(cont < 16.25){
+                                cont=16.25
                             }    
-                            Player.style.marginTop = `${cont}px`  
+                            Player.style.marginTop = `${cont}rem`  
                         } 
 
                     },0.5)                    
 
                 }
         })
-    
+        
+        
+
+ }
+
+function startup(){
+    ButtonPlay.document.addEventListener("touchstart",handleStart,false)
 }
 
+ function handleStart(){
+     ClickUp = setTimeout(function(){
+         
+         if(FundoWidth.clientWidth == 206){
+             cont-=3.75
+             if(cont < 16.25){
+                 cont=16.25
+             }    
+             Player.style.marginTop = `${cont}rem`  
+         } 
+
+     },0.5)  
+}
 MotionPlayer()
 AninPlayer()
 

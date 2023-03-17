@@ -6,7 +6,6 @@
 
 #home-page .menu{
     display: flex;
-    flex: 1;
     position: relative;
     background-color: rgb(45, 44, 44);
     height: 10vh;
@@ -17,18 +16,18 @@
 
 }
 #home-page .menu img{
-    width:150px;
+    width:9.4rem;
 }
 #home-page .menu h1{
     margin-right: 18rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: white;
 }
 
 #home-page .grid{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr ;      
-    grid-auto-rows: 180px;
+    grid-auto-rows: 11.25rem;
     margin-left: -3rem;
 }
 .box1 {
@@ -42,19 +41,30 @@
 .box2 {
     grid-row-start: 2;
     grid-row-end: 5; 
-    width: 206px;
+    width: 12.875rem;
     margin-left: -3rem;
     background-color:black;        
     z-index: 11;
 }
+.box2 .button{
+    width: 4rem;
+    height: 4rem;
+    background-color: red;
+    border-radius: 5.5rem;
+    margin-left: 7rem;
+    margin-top: 7rem;
+    border: 0.2rem solid white;
+    box-shadow: inset 2px 5px 30px 5px black; 
+    
+}
 .box3{
-    margin-left: -160px;
+    margin-left: -11rem;
 }
 .box4 {
     grid-column-start:3;      
     grid-row-start: 2;
     grid-row-end: 5;
-    margin-left: -250px;
+    margin-left: -15rem;
     background-color:black;
     z-index: 11;    
 }
@@ -64,8 +74,9 @@
     grid-row-start: 3;
     grid-column-end:4;        
     background-color:black;
-    margin-top: 46px;
-    width: 40%;
+    margin-top: 2.9rem;
+    margin-left: -0.75rem;
+    width: 45%;
     height: 120%;
     z-index: 11;
 }
@@ -76,51 +87,51 @@
     height: 40vh;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
-    margin-top: 17.5px; 
+    margin-left: 6rem;
+    margin-top: 1.1rem; 
 
 }
 #home-page .content .score{
     position: relative;
     color: white;
-    left:90px;
+    left:5.7rem;
     top:0px;
     z-index: 5;
-    font-size: 0.50rem;
-    margin-bottom: 125px;
+    font-size: 0.5rem;
+    margin-bottom: 8rem;
 }
 #home-page .content .score span{
     position:relative;
-    left:35px;
-    bottom:10.5px;
+    left:2.2rem;
+    bottom:0.7rem;
 }
 
 #home-page .content .fundoMov1{
     position:relative;
-    width: 206px;
-    height: 174px;
+    width: 12.875rem;
+    height: 10.875rem;
    
 }
 #home-page .content .fundoMov2{
     position:relative;
-    width: 206px;
-    height: 174px;
+    width: 12.875rem;
+    height: 10.875rem;
 }
 #home-page .content .latao{
     background-image: url('../assets/latao2.png');
     background-repeat:no-repeat;
-    width: 35px;
-    height: 550px;
+    width: 2.1875rem;
+    height: 34.375rem;
     position: relative;
-    right: 206px;
-    top: -100px;
+    right: 12.9rem;
+    top: -6.25rem;
     z-index: 4;
 }
 #home-page .player{
     display: flex;
     position: relative;
-    width: 28px;
-    height: 28px;
+    width: 2.25rem;
+    height: 2.25rem;
 }
 #home-page .player ul{
     display: flex;
@@ -128,11 +139,11 @@
     flex-wrap: nowrap;
     position: relative;
     list-style-type: none;
-    top:-500px;
-    left: 150px;
+    top:-31.25rem;
+    left: 9.4rem;
     right: 0;
-    width: 28px;
-    height: 28px;
+    width: 2.25rem;
+    height: 2.25rem;
 
 }
 #home-page .content .player ul li{
@@ -140,19 +151,19 @@
 
 }
 #home-page .player ul li img{
-    width: 128px;
-    height: 72px;
+    width: 9rem;
+    height: 4.6rem;
     position: relative;
 }
 
 #home-page .pointColission{
     display:flex ;
     position: relative;
-    width: 30px;
-    height: 20px;      
+    width: 1.9rem;
+    height: 1.3rem;      
     background-color: rgb(35, 0, 59);
-    top:360px;
-    left: 40px;
+    top:22.5rem;
+    left: 2.5rem;
     right: 0;
 
 }
@@ -173,42 +184,43 @@
     
     }
     #home-page .menu img{
-        width:350px;
+        width:21.875rem;
     }
     #home-page .menu h1{
-        margin-right: 500px;
+        margin-right: 31.25rem;
         font-size: 2rem;
     }
     #home-page .grid{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr ;      
-        grid-auto-rows: 160px;
+        grid-auto-rows: 10rem;
         margin-left: 0;
     }
     .box1 {
         grid-column-start: 1;
         grid-row-start: 1;
         grid-column-end: 4;        
-        background-color: black;
         height: 100%;
         z-index: 11;
     }
     .box2 {
         grid-row-start: 2;
         grid-row-end: 5; 
-        width: 512px;
-        background-color:black;        
+        width: 32rem;    
         z-index: 11;
     }
+    .box2 .button{
+        display: none;
+        
+    }
     .box3{
-        margin-left: -160px;
+        margin-left: -10rem;
     }
     .box4 {
         grid-column-start:3;      
         grid-row-start: 2;
         grid-row-end: 5;
-        margin-left: -600px;
-        background-color:black;
+        margin-left: -37.5rem;
         z-index: 11;
         
     }
@@ -225,42 +237,42 @@
     }
     #home-page .content .score{
         position: relative;
-        left:100px;
+        left:6.25rem;
         top:0px;
         z-index: 5;
-        margin-bottom: 250px;
+        margin-bottom: 15.7rem;
         font-size: 1rem;
     }
     #home-page .content .score span{
         position:relative;
-        left:70px;
-        bottom:21px;
+        left:4.4rem;
+        bottom:1.4rem;
     }
     
     #home-page .content .fundoMov1{
         position:relative;
-        width: 412px;
-        height: 348px;
+        width: 25.75rem;
+        height: 21.75rem;
     }
     #home-page .content .fundoMov2{
         position:relative;
-        width: 412px;
-        height: 348px;
+        width: 25.75rem;
+        height: 21.75rem;
     }
     #home-page .content .latao{
 
-        width: 100px;
-        height: 700px;
+        width: 6.25rem;
+        height: 43.75rem;
         position: relative;
-        right: 412px;
+        right: 25.75rem;
         top: 0px;
         z-index: 4;
     }
     #home-page .player{
         display: flex;
         position: relative;
-        width: 56px;
-        height: 56px;
+        width: 3.5rem;
+        height: 3.5rem;
 
     }
     #home-page .player ul{
@@ -269,11 +281,11 @@
         flex-wrap: nowrap;
         position: relative;
         list-style-type: none;
-        top:-360px;
-        left: 100px;
+        top:-22.5rem;
+        left: 6.25rem;
         right: 0;
-        width: 56px;
-        height: 56px;
+        width: 3.5rem;
+        height: 3.5rem;
     
     }
     #home-page .content .player ul li{
@@ -282,18 +294,18 @@
     
     }
     #home-page .player ul li img{
-        width: 256px;
-        height: 128px;
+        width: 16rem;
+        height: 8rem;
         position: relative;
     }
 
     #home-page .pointColission{
         display:flex ;
         position: relative;
-        width: 60px;
-        height: 40px;
-        top:360px;
-        left: 80px;
+        width: 3.5rem;
+        height: 2.5rem;
+        top:22.5rem;
+        left: 5rem;
         right: 0;
     
     }
