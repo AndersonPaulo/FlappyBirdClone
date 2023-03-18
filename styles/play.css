@@ -177,7 +177,7 @@
     right: 0;
 
 }
-/* @media(min-width:360px){
+@media(min-width:320px){
     #home-page{
         position: fixed;    
     }
@@ -211,8 +211,8 @@
         grid-column-start: 1;
         grid-row-start: 1;
         grid-column-end: 4;
-        height: 50%;       
-        top: -1.2rem; 
+        height: 34%;       
+        top: -0.8rem; 
         z-index: 11;
         
     }
@@ -261,7 +261,7 @@
         margin-left: -6.8rem;
         width: 100vw;
         height: 100vh;
-        top:-13.5rem;
+        top:-15rem;
         z-index: 11;
    
     }
@@ -350,7 +350,7 @@
     
     }
 
-} */
+}
 @media(min-width:380px){
     #home-page{
         position: fixed;    
