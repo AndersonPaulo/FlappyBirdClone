@@ -77,7 +77,17 @@
     top:-9rem;
     z-index: 11;    
 }
-
+.box4 .button2{
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    border-radius: 5.5rem;
+    margin-left: 1rem;
+    margin-top: 7rem;
+    border: 0.2rem solid white;
+    box-shadow: inset 2px 5px 30px 5px black; 
+    
+}
 .box5 {
     position: relative;
     grid-column-start: 2;
@@ -773,6 +783,11 @@
         top:-0.1rem;
 
     }  
+    .box4 .button2{
+        display:none;
+
+        
+    }
 
     #home-page .content{
         display: flex;   
