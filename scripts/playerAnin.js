@@ -10,13 +10,12 @@ const ButtonPower = document.querySelector(".box4 .button2")
 let interval = 0
 let interval2 = 0
 let cont = 0
-let time = 0
 let fly = true
 
 function AninPlayer(){
 
     let AninInterval = setInterval(function(){ 
-            time++
+           
             Frame[interval].style.display= 'none'     
             FramePower[interval2].style.display= 'none'
             interval++
