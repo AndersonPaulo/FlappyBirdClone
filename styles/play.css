@@ -146,6 +146,7 @@
     position: relative;
     right: 12.9rem;
     top: -6.25rem;
+    z-index: 3;
 }
 #home-page .player{
     display: flex;
@@ -160,8 +161,8 @@
     flex-wrap: nowrap;
     position: relative;
     list-style-type: none;
-    top:-39.25rem;
-    left: 9.4rem;
+    top:-6rem;
+    left: 12.4rem;
     right: 0;
     width: 2.25rem;
     height: 2.25rem;
@@ -172,24 +173,12 @@
 
 }
 #home-page .player ul li img{
-    width: 9rem;
-    height: 4.6rem;
-    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
     
 }
 
-#home-page .pointColission{
-    display:flex ;
-    position: relative;
-    width: 2.25rem;
-    height: 2.25rem;      
-    background-color: rgb(35, 0, 59);
-    top:22.5rem;
-    left: 2.5rem;
-    right: 0;
-    box-sizing: border-box;
 
-}
 @media(min-width:320px){
     #home-page{
         position: fixed;    
@@ -337,8 +326,8 @@
         flex-wrap: nowrap;
         position: relative;
         list-style-type: none;
-        top:-32rem;
-        left: 9.4rem;
+        top:-6rem;
+        left: 12.4rem;
         right: 0;
         width: 2.25rem;
         height: 2.25rem;
@@ -349,22 +338,13 @@
     
     }
     #home-page .player ul li img{
-        width: 9rem;
-        height: 4.6rem;
-        position: relative;
+        width: 2.25rem;
+        height: 2.25rem;
+        
         
     }
     
-    #home-page .pointColission{
-        display:flex ;
-        position: relative;
-        width: 2.25rem;
-        height: 2.25rem;      
-        top:22.5rem;
-        left: 2.5rem;
-        right: 0;
-    
-    }
+
 
 }
 @media(min-width:380px){
@@ -514,8 +494,8 @@
         flex-wrap: nowrap;
         position: relative;
         list-style-type: none;
-        top:-34rem;
-        left: 9.4rem;
+        top:-6rem;
+        left: 12.4rem;
         right: 0;
         width: 2.25rem;
         height: 2.25rem;
@@ -526,21 +506,13 @@
     
     }
     #home-page .player ul li img{
-        width: 9rem;
-        height: 4.6rem;
-        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        
         
     }
     
-    #home-page .pointColission{
-        position: relative;
-        width: 2.25rem;
-        height: 2.25rem;      
-        top:22.5rem;
-        left: 2.5rem;
-        right: 0;
-        box-sizing: border-box;
-    }
+
 
 }
 @media(min-width:412px){
@@ -687,8 +659,8 @@
         flex-wrap: nowrap;
         position: relative;
         list-style-type: none;
-        top:-35rem;
-        left: 9.4rem;
+        top:-5rem;
+        left: 12.4rem;
         right: 0;
         width: 2.25rem;
         height: 2.25rem;
@@ -699,22 +671,13 @@
     
     }
     #home-page .player ul li img{
-        width: 9rem;
-        height: 4.6rem;
-        position: relative;
+        width: 2.5rem;
+        height: 2.5rem;
+        
         
     }
     
-    #home-page .pointColission{
-        display:flex ;
-        position: relative;
-        width: 2.25rem;
-        height: 2.25rem;      
-        top:22.5rem;
-        left: 2.5rem;
-        right: 0;
-        box-sizing: border-box;
-    }
+ 
 
 }
 @media(min-width:700px){
@@ -835,7 +798,7 @@
         width: 6.25rem;
         height: 43.75rem;
         position: relative;
-        right: 25.75rem;
+        right: -25.75rem;
         top: 0px;
         box-sizing: border-box;
     }
@@ -852,8 +815,8 @@
         flex-wrap: nowrap;
         position: relative;
         list-style-type: none;
-        top:-22.5rem;
-        left: 6.25rem;
+        top:-23.5rem;
+        left: 12.4rem;
         right: 0;
         width: 3.5rem;
         height: 3.5rem;
@@ -865,18 +828,9 @@
     
     }
     #home-page .player ul li img{
-        width: 16rem;
-        height: 8rem;
-        position: relative;
-    }
-
-    #home-page .pointColission{
-        position: relative;
         width: 3.5rem;
         height: 3.5rem;
-        top:22.5rem;
-        left: 5rem;
-        right: 0;
-        box-sizing: border-box;
+        
     }
+
 }

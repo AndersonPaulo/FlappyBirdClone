@@ -1,5 +1,5 @@
 const MaxFrame = document.querySelectorAll(".player ul li").length-1
-const Player = document.querySelector("#home-page .player ul")
+const Player = document.querySelector(".player ul")
 const Frame = document.querySelectorAll(".player ul li img")
 const FramePower = document.getElementsByClassName("power")
 const MaxFramePower = document.getElementsByClassName("power").length-1
@@ -59,6 +59,7 @@ function AninPlayer(){
             
             ButtonPower.addEventListener("touchstart",()=>{
                     ButtonPower.style.backgroundColor ="green"
+                    FramePower[interval2].style.display= 'none'
                     Frame[interval].style.display= 'none'                                                    
                     interval2++
                 
@@ -73,7 +74,7 @@ function AninPlayer(){
             ButtonPower.addEventListener("touchend",()=>{
                     
                     ButtonPower.style.backgroundColor ="yellow"
-                    //FramePower[interval2].style.display= 'none'
+                    FramePower[interval2].style.display= 'none'
                     
             })
                   
@@ -85,53 +86,59 @@ function AninPlayer(){
 
 function MotionPlayer(){
    
-        Down=setInterval(function(){
+        Down=setInterval(function(){           
+                
+            
             if(FundoWidth.clientWidth == 412){
-                cont+=1.2
-                if(cont > 18.75){
-                    cont = 18.75
+                cont+=0.1
+                if(cont >= -3.5){
+                    cont = -3.5
+                    
                 }
-                Player.style.marginTop = `${cont}rem`
-            }
-            if(FundoWidth.clientWidth == 206){
-                ButtonPlay.addEventListener("touchend",EndButton)
-                ButtonPlay.addEventListener("touchstart",StartButton)
-                cont+=1.2
-                if(cont > 26.25){
-                    cont = 26.25
-                }
-                Player.style.marginTop = `${cont}rem`
-            }
-            },100) 
 
+            Player.style.top = `${cont}rem`
+            
+            }
+               if(FundoWidth.clientWidth == 206){
+                 ButtonPlay.addEventListener("touchend",EndButton)
+                 ButtonPlay.addEventListener("touchstart",StartButton)
+                  cont+=0.1
+                  if(cont >= -6){
+                      cont = -6
+                  }
+                  Player.style.top = `${cont}rem`
+             }
+            
+            },1) 
+        }
         
         document.addEventListener("keydown",(Event)=>{
                 if(Event.key===" "){
                     ClickUp = setTimeout(function(){
                         if(FundoWidth.clientWidth == 412){
                             cont-=3.75
-                            if(cont < -1.25){
-                                cont=-1.25
+                            if(cont < -23.5){
+                                cont= -23.5
                             }    
-                            Player.style.marginTop = `${cont}rem`  
+                            Player.style.top = `${cont}rem`  
                         } 
 
-                        if(FundoWidth.clientWidth == 206){
-                            cont-=3.75
-                            if(cont < 16.25){
-                                cont=16.25
-                            }    
-                            Player.style.marginTop = `${cont}rem`  
-                        } 
+                    if(FundoWidth.clientWidth == 206){
+                        cont-=2.75
+                        if(cont < -16.25){
+                            cont=-16.25
+                        }    
+                        Player.style.top = `${cont}rem`  
+                    } 
 
                     },0.5)                    
 
                 }
-        })
+         })
         
         
 
- }
+//  }
 
 
  function StartButton(){
@@ -139,15 +146,16 @@ function MotionPlayer(){
      ClickUp = setTimeout(function(){
          
          if(FundoWidth.clientWidth == 206){
-             cont-=3.75
-             if(cont < 16.25){
-                 cont=16.25
+             cont-=2.75
+             if(cont < -16.25){
+                 cont=-16.25
              }    
-             Player.style.marginTop = `${cont}rem` 
+             Player.style.top = `${cont}rem` 
               
          } 
 
      },0.5)  
+    
 }
 
 
