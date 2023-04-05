@@ -38,8 +38,9 @@ function detectColission(){
         clearInterval(Down)
         Playing = false
     } 
-    if(rectIntersect(Pla, Poin)&& Poin.left >= 210){
-         contadorPoint+=1 
+    if(rectIntersect(Pla, Poin)){
+         contadorPoint+=1
+         
          
     }   
     Score.innerHTML = `${contadorPoint}`

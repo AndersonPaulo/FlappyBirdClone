@@ -112,7 +112,7 @@ let Down=setInterval(function(){
             Player.style.top = `${cont}rem`
         }
     
-    },10) 
+    },15) 
 
 
 document.addEventListener("keydown",(Event)=>{
@@ -152,7 +152,7 @@ document.addEventListener("keydown",(Event)=>{
     
      
          if(FundoWidth.clientWidth == 206){
-             cont-=1.25
+             cont-=1.35
              if(cont < -1.25){
                  cont=-1.25
              }    
