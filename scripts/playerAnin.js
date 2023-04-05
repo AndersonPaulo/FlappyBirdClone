@@ -152,7 +152,7 @@ document.addEventListener("keydown",(Event)=>{
     
      
          if(FundoWidth.clientWidth == 206){
-             cont-=1.75
+             cont-=1.25
              if(cont < -1.25){
                  cont=-1.25
              }    
