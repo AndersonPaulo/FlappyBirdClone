@@ -181,11 +181,12 @@ main{
     
     }
     #home-page .menu img{
-        width:21.875rem;
+        width:15rem;
     }
     #home-page .menu h1{
-        margin-right: 31.25rem;
+        margin-right: 35rem;
         font-size: 2rem;
+        width:15rem;
     }   
    
     #home-page .content{
