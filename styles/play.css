@@ -136,8 +136,8 @@ main{
 #home-page .player{
     display: flex;
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     box-sizing: border-box;
 }
 #home-page .player ul{
@@ -149,8 +149,8 @@ main{
     top:-7rem;
     left: 1.4rem;
     right: 0;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     box-sizing: border-box;
 }
 #home-page .content .player ul li{
@@ -158,8 +158,8 @@ main{
 
 }
 #home-page .player ul li img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
     
 }
 
@@ -283,8 +283,8 @@ main{
     #home-page .player{
         display: flex;
         position: absolute;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 3rem;
+        height: 3rem;
         box-sizing: border-box;
     }
     #home-page .player ul{
@@ -296,8 +296,8 @@ main{
         top:-23.5rem;
         left: 4rem;
         right: 0;
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 3rem;
+        height: 3rem;
         box-sizing: border-box;
     }
     #home-page .content .player ul li{
@@ -306,8 +306,8 @@ main{
     
     }
     #home-page .player ul li img{
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 3rem;
+        height: 3rem;
         
     }
 

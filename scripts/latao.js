@@ -96,6 +96,6 @@ let LeftLatao = setInterval(function(){
                 
             }
         }       
-},20)
+},18)
 
 detectColission()
