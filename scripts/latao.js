@@ -2,6 +2,7 @@ const Latao =  document.querySelector(".content .latao")
 const player = document.querySelector("#home-page .player ul")
 const point2 = document.querySelector(".content .latao .latao2")
 const point1 = document.querySelector(".content .latao .latao1")
+const Pointing = document.querySelector("#home-page .content .latao1 .pointing")
 const FundosWidth = document.querySelector(".content .fundoMov1")
 const ButtonPower2 = document.querySelector(".button2")
 const Score = document.querySelector("#home-page .score span h3")
@@ -20,6 +21,7 @@ function detectColission(){
         let Pla = player.getBoundingClientRect()
         let Po = point1.getBoundingClientRect()
         let Po2 = point2.getBoundingClientRect()
+        let Poin = Pointing.getBoundingClientRect()
         
     let rangeIntersect = function(min0, max0, min1, max1) {
         return Math.max(min0, max0) >= Math.min(min1, max1) && Math.min(min0, max0) <= Math.max(min1, max1)
@@ -29,13 +31,17 @@ function detectColission(){
         return rangeIntersect(r0.left, r0.right, r1.left, r1.right) && rangeIntersect(r0.top, r0.bottom, r1.top, r1.bottom)
     }
     if(rectIntersect(Pla, Po) || (rectIntersect(Pla,Po2))){
-        // contadorPoint+=1 
+        
         clearInterval(LeftLatao)
         clearInterval(leftFundo)
         clearInterval(AninInterval)
         clearInterval(Down)
         Playing = false
-    }    
+    } 
+    if(rectIntersect(Pla, Poin)&& Poin.left >= 210){
+         contadorPoint+=1 
+         
+    }   
     Score.innerHTML = `${contadorPoint}`
         
         
