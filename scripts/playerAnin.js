@@ -119,7 +119,7 @@ document.addEventListener("keydown",(Event)=>{
         if(Event.key===" " && Playing == true){
             ClickUp = setTimeout(function(){
                 if(FundoWidth.clientWidth == 412){
-                    cont-=0.75
+                    cont-=1.85
                     if(cont < -20.5){
                         cont= -20.5
                     }    
@@ -127,7 +127,7 @@ document.addEventListener("keydown",(Event)=>{
                 } 
 
             if(FundoWidth.clientWidth == 206){
-                cont-=0.75
+                cont-=0.25
                 if(cont < -1.25){
                     cont=-1.25
                 }    
