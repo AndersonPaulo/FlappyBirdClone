@@ -1,37 +1,21 @@
 const Fundo1 = document.querySelector(".content .fundoMov1")
 const Fundo2 = document.querySelector(".content .fundoMov2")
-const ButtonPower1 = document.querySelector(".box4 .button2")
+const ButtonPower1 = document.querySelector(".button2")
 
 let contador1  =  0
-let contador2  =  0
+let contador2  =  -25.75
 let contador3  =  0
-let contador4  =  0
-let velocity = 0.1
+let contador4  =  -12.875
 
-document.addEventListener("keydown",(Event)=>{
-    if(Event.shiftKey===true){ 
-        velocity = 0.4
-    }
-})
 
-document.addEventListener("keyup",(Event)=>{
-    if(Event.shiftKey===false){
-        velocity= 0.1
-     }
-})
 
-ButtonPower1.addEventListener("touchstart",()=>{
-    velocity = 0.4
-})
-ButtonPower1.addEventListener("touchend",()=>{
-    velocity = 0.1  
-})
+
 
 let leftFundo = setInterval(function(){
     if(Fundo1.clientWidth == 412){
       
-        contador1 += velocity
-        contador2 += velocity
+        contador1 += 0.1
+        contador2 += 0.1
 
         Fundo2.style.right = `${contador2}rem`
         Fundo1.style.right = `${contador1}rem`    
@@ -41,8 +25,8 @@ let leftFundo = setInterval(function(){
         }      
    
         
-        if(contador2 >= 51.5){
-            contador2 =0
+        if(contador2 >= 25.75){
+            contador2 =-25.75
             Fundo2.style.right = `${contador2}rem`
 
         }
@@ -61,8 +45,8 @@ let leftFundo = setInterval(function(){
             Fundo1.style.right = `${contador3}rem`
        }
 
-        if(contador4 >= 25.75){
-            contador4 = 0
+        if(contador4 >= 12.875){
+            contador4 = -12.875
             Fundo2.style.right = `${contador4}rem`
         }        
             

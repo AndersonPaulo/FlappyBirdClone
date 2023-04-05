@@ -1,8 +1,9 @@
 const Latao =  document.querySelector(".content .latao")
-const player = document.querySelector("#home-page .player ul li")
-const point = document.querySelector(".content .latao")
+const player = document.querySelector("#home-page .player ul")
+const point2 = document.querySelector(".content .latao .latao2")
+const point1 = document.querySelector(".content .latao .latao1")
 const FundosWidth = document.querySelector(".content .fundoMov1")
-const ButtonPower2 = document.querySelector(".box4 .button2")
+const ButtonPower2 = document.querySelector(".button2")
 const Score = document.querySelector("#home-page .score span h3")
 let contadorPoint = 0
 
@@ -16,17 +17,27 @@ function detectColission(){
    
     setInterval(()=>{
 
-      
+        let Pla = player.getBoundingClientRect()
+        let Po = point1.getBoundingClientRect()
+        let Po2 = point2.getBoundingClientRect()
         
-        if ((point.offsetLeft < player.offsetLeft + player.offsetWidth &&
-             point.offsetLeft + point.offsetWidth > player.offsetLeft  &&
-             point.offsetTop < player.offsetTop + player.offsetHeight  &&
-             point.offsetTop + point.offsetHeight  > player.offsetTop) && point.offsetLeft >= 8){        
-                
-                contadorPoint+=1 
-                  
-        }         
-        Score.innerHTML = `${contadorPoint}`    
+    let rangeIntersect = function(min0, max0, min1, max1) {
+        return Math.max(min0, max0) >= Math.min(min1, max1) && Math.min(min0, max0) <= Math.max(min1, max1)
+    }
+   
+    let rectIntersect = function (r0, r1) {
+        return rangeIntersect(r0.left, r0.right, r1.left, r1.right) && rangeIntersect(r0.top, r0.bottom, r1.top, r1.bottom)
+    }
+    if(rectIntersect(Pla, Po) || (rectIntersect(Pla,Po2))){
+        // contadorPoint+=1 
+        clearInterval(LeftLatao)
+        clearInterval(leftFundo)
+        clearInterval(AninInterval)
+        clearInterval(Down)
+        Playing = false
+    }    
+    Score.innerHTML = `${contadorPoint}`
+        
         
     },100)
    
@@ -36,10 +47,17 @@ function detectColission(){
 function getRandomPosition(max,min){
     return Math.floor(Math.random()* max)-min
 }
+function getRandomPosition2(){
+    let randon = Math.floor(Math.random()*30)-40
+   
+    
+    return randon
+    
+}
 
 document.addEventListener("keydown",(Event)=>{
     if(Event.shiftKey===true){ 
-        contVelocityLatao = 2
+        contVelocityLatao = 1
     }
 })
 
@@ -50,7 +68,7 @@ document.addEventListener("keyup",(Event)=>{
 })
 
 ButtonPower1.addEventListener("touchstart",()=>{
-    contVelocityLatao = 2
+    contVelocityLatao = 1
 })
 ButtonPower1.addEventListener("touchend",()=>{
     contVelocityLatao = 0.5
@@ -62,11 +80,11 @@ let LeftLatao = setInterval(function(){
     if(FundosWidth.clientWidth == 412){
             contadorlatao+=contVelocityLatao
             Latao.style.right =`${contadorlatao}px`
-           
-            if(contadorlatao >896){
-                contadorlatao = 412
+          
+            if(contadorlatao >412){
+                contadorlatao = -128
                 Latao.style.right =`${contadorlatao}px`
-                Latao.style.top = `${getRandomPosition(90,130)}px`
+                Latao.style.top = `${getRandomPosition(100,100)}px`
                
             }
         } 
@@ -74,10 +92,10 @@ let LeftLatao = setInterval(function(){
             contadorlatao+=contVelocityLatao
             Latao.style.right =`${contadorlatao}px`
            
-            if(contadorlatao >896){
-                contadorlatao = 206
+            if(contadorlatao >206){
+                contadorlatao = -128
                 Latao.style.right =`${contadorlatao}px`
-                Latao.style.top = `${getRandomPosition(90,130)}px`
+                Latao.style.top = `${getRandomPosition2()}px`
                 
             }
         }       

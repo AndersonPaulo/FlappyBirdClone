@@ -1,9 +1,7 @@
 #home-page{
     position: fixed;
     background-color: black; 
-
 }
-
 #home-page .menu{
     display: flex;
     position: relative;
@@ -24,99 +22,31 @@
     color: white;
 }
 
-#home-page .grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr ;      
-    grid-auto-rows: 11.25rem;
-    margin-left: -3rem;
-}
-.box1 {
-    position:relative;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 4;
-    height: 40%;      
-    top: -1rem; 
-    z-index: 11;
-    background-color: black;
-}
-.box2 {
-    position: relative;
-    grid-row-start: 2;
-    grid-row-end: 5; 
-    width: 12.875rem;
-    height: 100vh;
-    margin-left: -3rem;
-    background-color:black;  
-    top:-9rem;      
-    z-index: 11;
-}
-.box2 .button{
-    width: 4rem;
-    height: 4rem;
-    background-color: red;
-    border-radius: 5.5rem;
-    margin-left: 7rem;
-    margin-top: 7rem;
-    border: 0.2rem solid white;
-    box-shadow: inset 2px 5px 30px 5px black; 
-    
-}
-.box3{
-    margin-left: -11rem;
-    margin-top:-12.2rem;
-}
-.box4 {
-    position: relative;
-    grid-column-start:3;      
-    grid-row-start: 2;
-    grid-row-end: 5;
-    margin-left: -15rem;
-    background-color:black;
-    height: 100vh;
-    top:-9rem;
-    z-index: 11;    
-}
-.box4 .button2{
-    width: 4rem;
-    height: 4rem;
-    background-color: yellow;
-    border-radius: 5.5rem;
-    margin-left: 1rem;
-    margin-top: 7rem;
-    border: 0.2rem solid white;
-    box-shadow: inset 2px 5px 30px 5px black; 
-    
-}
-.box5 {
-    position: relative;
-    grid-column-start: 2;
-    grid-row-start: 3;
-    grid-column-end:4;        
-    background-color:black;
-    margin-top: 2.9rem;
-    margin-left: -6.8rem;
-    width: 100vw;
-    height: 100vh;
-    top:-11.5rem;
-    z-index: 11;
-}
 #home-page .content{
     display: flex;
     flex-wrap: nowrap;
-    position: relative;
+    position: absolute;
     height: 40vh;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    margin-left: 6rem;
-    margin-top: 1.1rem; 
+    margin-left: 12rem; 
+    margin-top: -2.2rem; 
+
+}
+#home-page .game-board{
+    width: 10rem;
+    height: 10.875rem;
+    border: 1px solid #333;
+    position:relative;
+    overflow: hidden;
+    margin: 1rem auto;
 
 }
 #home-page .content .score{
-    position: relative;
+    position: absolute;
     color: white;
-    left:5.7rem;
-    top:0px;
+    left:-11rem;
+    top:3rem;
     z-index: 5;
     font-size: 0.5rem;
     margin-bottom: 8rem;
@@ -128,44 +58,61 @@
 }
 
 #home-page .content .fundoMov1{
-    position:relative;
+    position:absolute;
     width: 12.875rem;
     height: 10.875rem;
-   
+    top:2.2rem;
 }
 #home-page .content .fundoMov2{
-    position:relative;
+    position:absolute;
     width: 12.875rem;
     height: 10.875rem;
+    top:2.2rem;
 }
-#home-page .content .latao{
-    background-image: url('../assets/latao2.png');
+  #home-page .content .latao{
+    position:absolute;
+    top:30px;
+}  
+#home-page .content .latao1{
+    background-image: url('../assets/top.png');
     background-repeat:no-repeat;
     width: 2.1875rem;
-    height: 34.375rem;
-    position: relative;
-    right: 12.9rem;
-    top: -6.25rem;
+    height: 14rem;
+    position: absolute;
+    right: 1rem;
     z-index: 3;
+    top:-7rem;
+
 }
+#home-page .content .latao2{
+    background-image: url('../assets/down.png');
+    background-repeat:no-repeat;
+    width: 2.1875rem;
+    height: 34rem;
+    position: absolute;
+    right: 1rem;
+    z-index: 3;
+    top:10rem;
+}
+
 #home-page .player{
     display: flex;
-    position: relative;
-    width: 2.25rem;
-    height: 2.25rem;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
     box-sizing: border-box;
 }
 #home-page .player ul{
     display: flex;
     flex: 1;
     flex-wrap: nowrap;
-    position: relative;
+    position: absolute;
     list-style-type: none;
-    top:-6rem;
-    left: 12.4rem;
+    top:-7rem;
+    left: 1.4rem;
     right: 0;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2rem;
+    height: 2rem;
     box-sizing: border-box;
 }
 #home-page .content .player ul li{
@@ -179,7 +126,7 @@
 }
 
 
-@media(min-width:320px){
+/*@media(min-width:320px){
     #home-page{
         position: fixed;    
     }
@@ -201,72 +148,7 @@
         font-size: 0.7rem;
      
     }
-    
-    #home-page .grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr ;      
-        grid-auto-rows: 11.25rem;
-        margin-left: -3rem;
-    }
-    .box1 {
-        position:relative;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-column-end: 4;
-        height: 34%;       
-        top: -0.8rem; 
-        z-index: 11;
-        
-    }
-    .box2 {
-        position: relative;
-        grid-row-start: 2;
-        grid-row-end: 5; 
-        width: 12.875rem;
-        height: 100vh;
-        margin-left: -3rem;
-        top:-9rem;      
-        z-index: 11;
-        
-    }
-    .box2 .button{
-        width: 4rem;
-        height: 4rem;
-        border-radius: 5.5rem;
-        margin-left: 7rem;
-        margin-top: 7rem;
 
-        
-    }
-    .box3{
-        margin-left: -11rem;
-        margin-top:-12.2rem;
-    }
-    .box4 {
-        position: relative;
-        grid-column-start:3;      
-        grid-row-start: 2;
-        grid-row-end: 5;
-        margin-left: -15rem;
-        height: 100vh;
-        top:-9rem;
-        z-index: 11; 
-           
-    }
-    
-    .box5 {
-        position: relative;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-column-end:4;        
-        margin-top: 5.8rem;
-        margin-left: -6.8rem;
-        width: 100vw;
-        height: 100vh;
-        top:-15rem;
-        z-index: 11;
-   
-    }
     #home-page .content{
         display: flex;
         flex-wrap: nowrap;
@@ -304,8 +186,7 @@
         height: 10.875rem;
     }
     #home-page .content .latao{
-        background-image: url('../assets/latao2.png');
-        background-repeat:no-repeat;
+
         width: 2.1875rem;
         height: 34.375rem;
         position: relative;
@@ -369,72 +250,7 @@
         font-size: 0.9rem;
      
     }
-    
-    #home-page .grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr ;      
-        grid-auto-rows: 11.25rem;
-        margin-left: -3rem;
-    }
-    .box1 {
-        position:relative;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-column-end: 4;
-        height: 60%;       
-        top: -1.2rem; 
-        z-index: 11;
-        
-    }
-    .box2 {
-        position: relative;
-        grid-row-start: 2;
-        grid-row-end: 5; 
-        width: 12.875rem;
-        height: 100vh;
-        margin-left: -3rem;
-        top:-9rem;      
-        z-index: 11;
-        
-    }
-    .box2 .button{
-        width: 4rem;
-        height: 4rem;
-        border-radius: 5.5rem;
-        margin-left: 7rem;
-        margin-top: 7rem;
 
-        
-    }
-    .box3{
-        margin-left: -11rem;
-        margin-top:-12.2rem;
-    }
-    .box4 {
-        position: relative;
-        grid-column-start:3;      
-        grid-row-start: 2;
-        grid-row-end: 5;
-        margin-left: -15rem;
-        height: 100vh;
-        top:-9rem;
-        z-index: 11; 
-           
-    }
-    
-    .box5 {
-        position: relative;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-column-end:4;        
-        margin-top: 5.8rem;
-        margin-left: -6.8rem;
-        width: 100vw;
-        height: 100vh;
-        top:-12.1rem;
-        z-index: 11;
-   
-    }
     #home-page .content{
         display: flex;
         flex-wrap: nowrap;
@@ -472,8 +288,7 @@
         height: 10.875rem;
     }
     #home-page .content .latao{
-        background-image: url('../assets/latao2.png');
-        background-repeat:no-repeat;
+
         width: 2.1875rem;
         height: 34.375rem;
         position: relative;
@@ -510,8 +325,7 @@
         height: 2.5rem;
         
         
-    }
-    
+    }   
 
 
 }
@@ -537,69 +351,8 @@
         margin-right: 26rem;
         font-size: 0.9rem;
      
-    }
+    }    
     
-    #home-page .grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr ;      
-        grid-auto-rows: 11.25rem;
-        margin-left: -3rem;
-    }
-    .box1 {
-        position:relative;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-column-end: 4;
-        height: 60%;       
-        top: -0.4rem; 
-        z-index: 11;
-    }
-    .box2 {
-        position: relative;
-        grid-row-start: 2;
-        grid-row-end: 5; 
-        width: 12.875rem;
-        height: 100vh;
-        margin-left: -3rem;
-        top:-9rem;      
-        z-index: 11;
-    }
-    .box2 .button{
-        width: 4rem;
-        height: 4rem;
-        border-radius: 5.5rem;
-        margin-left: 7rem;
-        margin-top: 7rem;
-
-        
-    }
-    .box3{
-        margin-left: -11rem;
-        margin-top:-12.2rem;
-    }
-    .box4 {
-        position: relative;
-        grid-column-start:3;      
-        grid-row-start: 2;
-        grid-row-end: 5;
-        margin-left: -15rem;
-        height: 100vh;
-        top:-9rem;
-        z-index: 11;    
-    }
-    
-    .box5 {
-        position: relative;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-column-end:4;        
-        margin-top: 5.8rem;
-        margin-left: -6.8rem;
-        width: 100vw;
-        height: 100vh;
-        top:-11.4rem;
-        z-index: 11;
-    }
     #home-page .content{
         display: flex;
         flex-wrap: nowrap;
@@ -637,8 +390,6 @@
         height: 10.875rem;
     }
     #home-page .content .latao{
-        background-image: url('../assets/latao2.png');
-        background-repeat:no-repeat;
         width: 2.1875rem;
         height: 34.375rem;
         position: relative;
@@ -675,11 +426,10 @@
         height: 2.5rem;
         
         
-    }
-    
+    }   
  
 
-}
+} */
 @media(min-width:700px){
     #home-page{
         position: fixed;
@@ -701,78 +451,31 @@
     #home-page .menu h1{
         margin-right: 31.25rem;
         font-size: 2rem;
-    }
-    #home-page .grid{
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr ;      
-        grid-auto-rows: 10rem;
-        margin-left: 0;
-    }
-    .box1 {
-        position: relative;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-column-end: 4;        
-        height: 30%;
-        top: -2rem;
-        z-index: 11;
-    }
-    .box2 {
-        position:relative;
-        grid-row-start: 2;
-        grid-row-end: 5; 
-        width: 32rem;  
-        top:-9rem;  
-        z-index: 11;
-    }
-    .box2 .button{
-        display: none;
-        
-    }
-    .box3{
-        margin-left: -10rem;
-        margin-top:-9rem;
-    }
-    .box4 {
-        position:relative;
-        grid-column-start:3;      
-        grid-row-start: 2;
-        grid-row-end: 5;
-        margin-left: -37.5rem;
-        top:-9rem;
-        z-index: 11;
-        
-    }
-    .box5 {
-        position:relative;
-        grid-column-start: 2;
-        grid-row-start: 3;
-        grid-column-end:4;        
-        background-color:black;
-        margin-top: 2.9rem;
-        margin-left: -0.75rem;
-        width: 45%;
-        height: 120%;
-        z-index: 11;
-        top:-0.1rem;
-
-    }  
-    .box4 .button2{
-        display:none;
-
-        
-    }
-
+    }   
+   
     #home-page .content{
         display: flex;   
         position: relative;
         height: 50vh;
+        justify-content: center; 
+        align-items: center;
+        margin-left: 6rem;
+        margin-top: 1.1rem; 
 
     }
+    #home-page .game-board{
+        width: 20.75rem;
+        height: 21.75rem;
+        border: 1px solid #333;
+        position:relative;
+        overflow:hidden;
+        margin: 1rem auto;
+    
+    }
     #home-page .content .score{
-        position: relative;
-        left:6.25rem;
-        top:0px;
+        position: absolute;
+        left:-3rem;
+        top:1rem;
         z-index: 5;
         margin-bottom: 15.7rem;
         font-size: 1rem;
@@ -784,27 +487,50 @@
     }
     
     #home-page .content .fundoMov1{
-        position:relative;
+        position:absolute;
         width: 25.75rem;
         height: 21.75rem;
+        right: 0;
+        top: -1.1rem;    
     }
     #home-page .content .fundoMov2{
-        position:relative;
+        position:absolute;
         width: 25.75rem;
         height: 21.75rem;
+        right: -25.75rem;
+        top: -1.1rem;
     }
     #home-page .content .latao{
+        position:absolute;
+        width: 8.25;
+        margin:0;
+        padding: 0;
+        top:100px;
+    }
+    #home-page .content .latao span{
+        margin: 0;
+        width:4rem;
+    }
 
-        width: 6.25rem;
-        height: 43.75rem;
-        position: relative;
-        right: -25.75rem;
-        top: 0px;
+    #home-page .content .latao1{
+        width: 8.25rem;
+        height: 13.75rem;
+        position: absolute;
+        right: -8rem;
         box-sizing: border-box;
+        top: -120px;
+    }
+    #home-page .content .latao2{
+        width: 8.25rem;
+        height: 43.75rem;
+        position: absolute;
+        right: -8rem;
+        box-sizing: border-box;
+        top: 190px;
     }
     #home-page .player{
         display: flex;
-        position: relative;
+        position: absolute;
         width: 3.5rem;
         height: 3.5rem;
         box-sizing: border-box;
@@ -813,10 +539,10 @@
         display: flex;
         flex: 1;
         flex-wrap: nowrap;
-        position: relative;
+        position: absolute;
         list-style-type: none;
         top:-23.5rem;
-        left: 12.4rem;
+        left: 4rem;
         right: 0;
         width: 3.5rem;
         height: 3.5rem;
