@@ -73,18 +73,9 @@ document.addEventListener("keyup",(Event)=>{
      }
 })
 
-ButtonPower1.addEventListener("touchstart",()=>{
-    contVelocityLatao = 1
-})
-ButtonPower1.addEventListener("touchend",()=>{
-    contVelocityLatao = 0.5
-})
-
-
-
 let LeftLatao = setInterval(function(){
     if(FundosWidth.clientWidth == 412){
-            contadorlatao+=contVelocityLatao
+            contadorlatao+=0.5
             Latao.style.right =`${contadorlatao}px`
           
             if(contadorlatao >412){
@@ -95,7 +86,7 @@ let LeftLatao = setInterval(function(){
             }
         } 
     if(FundosWidth.clientWidth == 206){
-            contadorlatao+=contVelocityLatao
+            contadorlatao+=0.5
             Latao.style.right =`${contadorlatao}px`
            
             if(contadorlatao >206){
