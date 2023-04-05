@@ -112,7 +112,7 @@ let Down=setInterval(function(){
             Player.style.top = `${cont}rem`
         }
     
-    },8) 
+    },10) 
 
 
 document.addEventListener("keydown",(Event)=>{
