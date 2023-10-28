@@ -12,5 +12,5 @@
 <h3>Clone do jogo Flappy Bird,criado para fins didáticos,feito com Html5,Css3 e JavaScript</h3>
 <p>Todos os códigos e assets foram criados por mim</p>
 <p>Teste aqui:</p>
-<p>Caso esteje usando um navegador utilize a bara de espaço!:</p>
+<p>Caso esteje usando desktop utilize a bara de espaço!:</p>
 https://andersonpaulo.github.io/FlappyBirdClone/
